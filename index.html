@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .ticon {
+            font-size: 40px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .menu {
+            background-color: #000000;
+            color: white;
+            position: fixed;
+            top: 0;
+            right: -25%;
+            width: 25%;
+            height: 100vh;
+            transition: 0.5s;
+        }
+
+        .menu ul li,
+        .menu ul li a {
+            color: white;
+        }
+
+        .close_btn {
+            font-size: 40px;
+            cursor: pointer;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+
+        .show_menu{
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Trigger -->
+    <span class="ticon" onclick="showMenu()">&#9776;</span>
+    <div class="menu" id="menu">
+        <span class="close_btn" onclick="closeMenu()">&times;</span>
+        <h2>Logo</h2>
+        <ul>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        function showMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.add('show_menu');
+        }
+
+        function closeMenu() {
+                var menu = document.getElementById('menu');
+                menu.classList.remove('show_menu');
+            }
+    </script>
+</body>
+
+</html>
